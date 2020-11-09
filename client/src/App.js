@@ -8,16 +8,19 @@ import AppNavbar from "./component/AppNavbar";
 
 import ShoppingList from './component/Shoppinglist';
 
-
-
+import {Provider} from 'react-redux';
+import store from './store/store';
 
 class App extends Component {
   render(){
     return (
-      <div classNam="App">
-        <AppNavbar/>
-        <ShoppingList/>
-      </div>
+      <Provider store={store}>
+         <div className="App">
+          <AppNavbar/>
+          <ShoppingList/>
+         </div>
+      </Provider>
+     
     );
   }
 }
