@@ -1,0 +1,4 @@
+{
+    "mongoUrl":"mongodb://localhost/shopping",
+    "jwtSecret": "sl_myjwtSecret"
+}
