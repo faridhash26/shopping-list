@@ -12,10 +12,14 @@ import ShoppingList from './component/Shoppinglist';
 import ItemModal from './component/ItemModal';
 import store from './store/store';
 
-
+import {loadUser} from './actions/authActions';
 
 
 class App extends Component {
+  componentDidMount() {
+    store.dispatch(loadUser());
+  }
+
   render(){
     return (
       <Provider store={store}>
